@@ -1,6 +1,6 @@
 # RIU-Frontend-FernandoMoya
 
-### Challenge: Mantenimiento de Superhéroes
+### Mantenimiento de Superhéroes
 
 Esta aplicación SPA permite gestionar un listado de superhéroes con funcionalidades de alta, edición, búsqueda, borrado y paginación. Desarrollada en **Angular 17** siguiendo buenas prácticas, arquitectura limpia, uso de `signals`, `rxjs` y cobertura de tests del **85%+**.
 
@@ -27,11 +27,6 @@ Esta aplicación SPA permite gestionar un listado de superhéroes con funcionali
 npm install
 ng serve
 ```
-
----
-
-### 👀 Acceso Rápido
-**GitHub:** [https://github.com/fmoya-laboral/RIU-Frontend-FernandoMoya](https://github.com/fmoya-laboral/RIU-Frontend-FernandoMoya)
 
 ---
 
