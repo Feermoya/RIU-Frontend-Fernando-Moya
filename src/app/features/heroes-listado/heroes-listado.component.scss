@@ -1,0 +1,93 @@
+mat-form-field {
+  width: 60%;
+  margin-bottom: 1rem;
+}
+
+button[color="primary"] {
+  background-color: #3f51b5;
+  color: white;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #303f9f;
+  }
+}
+
+button[color="warn"] {
+  background-color: #e53935;
+  color: white;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #c62828 !important;
+    transform: scale(1.02);
+  }
+}
+
+button mat-icon {
+  margin-right: 0.5rem;
+}
+
+.boton-anadir {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+
+  mat-icon {
+    font-size: 20px;
+  }
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+button[color="warn"] {
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #c62828 !important;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mat-card-hover {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.acciones-botones {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}

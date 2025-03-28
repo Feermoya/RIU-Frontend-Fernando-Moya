@@ -1,0 +1,67 @@
+.detalle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.detalle-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 1.5rem;
+  animation: fadeSlideIn 0.4s ease-out;
+}
+
+.titulo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.estado-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.activo {
+  background-color: #4caf50;
+}
+
+.inactivo {
+  background-color: #f44336;
+}
+
+.volver-btn {
+  margin-top: 1rem;
+  animation: fadeIn 0.6s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

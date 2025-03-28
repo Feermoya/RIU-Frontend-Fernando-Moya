@@ -1,0 +1,26 @@
+<form [formGroup]="form" (ngSubmit)="guardar()"
+  style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; padding: 1rem;">
+  <mat-form-field appearance="outline" style="flex: 1 1 200px; min-width: 250px;">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="nombre" appMayusculas />
+    <mat-error *ngIf="form.get('nombre')?.hasError('required')">
+      Campo obligatorio
+    </mat-error>
+    <mat-error *ngIf="form.get('nombre')?.hasError('minlength')">
+      Mínimo 3 caracteres
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="flex: 1 1 200px; min-width: 250px;">
+    <mat-label>Poder</mat-label>
+    <input matInput formControlName="poder" />
+  </mat-form-field>
+
+  <mat-checkbox formControlName="activo" style="margin-top: 0.5rem;">
+    ¿Está activo?
+  </mat-checkbox>
+
+  <button mat-raised-button color="primary" type="submit" style="height: 40px;">
+    Guardar
+  </button>
+</form>

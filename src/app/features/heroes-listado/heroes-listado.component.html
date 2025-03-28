@@ -1,0 +1,60 @@
+<div style="padding: 1rem">
+  <mat-form-field appearance="outline">
+    <mat-label>Filtrar por nombre</mat-label>
+    <input matInput [ngModel]="filtro()" (ngModelChange)="filtro.set($event)" />
+  </mat-form-field>
+
+  <div style="display: flex; justify-content: flex-end; margin-bottom: 1rem;">
+    <button mat-raised-button color="primary"
+      style="display: flex; align-items: center; gap: 0.4rem; font-weight: 600; font-size: 15px;"
+      (click)="mostrarFormularioParaNuevo()">
+      <span style="font-size: 18px;">✚</span> Añadir héroe
+    </button>
+
+  </div>
+
+  <app-heroes-formulario *ngIf="formularioVisible()" [heroeOriginal]="heroeEnEdicion()"
+    (formGuardado)="guardarHeroe($event)"></app-heroes-formulario>
+
+
+  <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: flex-start; padding: 1rem 0;">
+    <mat-card *ngFor="let heroe of heroesPaginados()" class="mat-card-hover"
+      style="margin-bottom: 1rem; width: fit-content; min-width: 300px; padding: 1rem;"
+      [routerLink]="['/detalle', heroe.id]">
+      <mat-card-title style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.3rem;">
+        {{ heroe.nombre }}
+      </mat-card-title>
+
+      <mat-card-content>
+        <div style="margin-bottom: 0.5rem;">Poder: {{ heroe.poder }}</div>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span [style.backgroundColor]="heroe.activo ? '#4CAF50' : '#F44336'"
+            style="width: 10px; height: 10px; border-radius: 50%; display: inline-block;"></span>
+          <span>{{ heroe.activo ? 'Activo' : 'Inactivo' }}</span>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions class="acciones-botones" (click)="$event.stopPropagation()">
+        <button mat-raised-button color="primary" (click)="mostrarFormularioParaEditar(heroe)"
+          style="display: flex; align-items: center; gap: 0.5rem;">
+          ✏️ Editar
+        </button>
+
+        <button mat-raised-button color="warn" (click)="borrar(heroe.id)"
+          style="display: flex; align-items: center; gap: 0.5rem;">
+          🗑️ Eliminar
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 2rem;">
+    <button mat-stroked-button (click)="cambiarPagina(-1)" [disabled]="paginaActual() === 1">
+      Anterior
+    </button>
+    <span>Página {{ paginaActual() }} / {{ totalPaginas() }}</span>
+    <button mat-stroked-button (click)="cambiarPagina(1)" [disabled]="paginaActual() === totalPaginas()">
+      Siguiente
+    </button>
+  </div>
+</div>

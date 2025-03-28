@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; margin: 0; }
+html, body, * {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: 'Montserrat-medium';
+    src: url('/assets/fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Montserrat-regular';
+    src: url('/assets/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Montserrat-bold';
+    src: url('/assets/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Montserrat-light';
+    src: url('/assets/fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
+  }

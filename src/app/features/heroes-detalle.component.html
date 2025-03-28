@@ -1,0 +1,17 @@
+<div class="detalle-container">
+  <mat-card class="detalle-card" *ngIf="heroe">
+    <mat-card-title class="titulo">{{ heroe.nombre }}</mat-card-title>
+    <mat-card-content>
+      <p><strong>Poder:</strong> {{ heroe.poder }}</p>
+      <p>
+        <strong>Estado:</strong>
+        <span class="estado-dot" [ngClass]="heroe.activo ? 'activo' : 'inactivo'"></span>
+        {{ heroe.activo ? 'Activo' : 'Inactivo' }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+  <button mat-raised-button color="primary" class="volver-btn" routerLink="/">
+    🔙 Volver
+  </button>
+</div>

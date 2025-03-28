@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "nombre": "Superman",
+    "poder": "Vuelo, visión de rayos X, superfuerza",
+    "activo": true
+  },
+  {
+    "id": 2,
+    "nombre": "Flash",
+    "poder": "Velocidad sobrehumana, viaje en el tiempo",
+    "activo": true
+  }
+]

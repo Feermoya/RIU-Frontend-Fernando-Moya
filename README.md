@@ -1,27 +1,83 @@
-# RiuHeroes
+# RIU-Frontend-FernandoMoya
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.14.
+### Challenge: Mantenimiento de Superhéroes
 
-## Development server
+Esta aplicación SPA permite gestionar un listado de superhéroes con funcionalidades de alta, edición, búsqueda, borrado y paginación. Desarrollada en **Angular 17** siguiendo buenas prácticas, arquitectura limpia, uso de `signals`, `rxjs` y cobertura de tests del **85%+**.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+### 🚀 Tecnologías
+- Angular 17
+- Angular Material
+- RxJS / Signals
+- Docker + Nginx
+- GitHub Actions (pruebas + build)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+### 📅 Requisitos
+- Node.js v20+
+- Angular CLI 17
+- Docker (opcional, para correr en contenedor)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+### 🔧 Instalación y Ejecución Local
+```bash
+npm install
+ng serve
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+### 👀 Acceso Rápido
+**GitHub:** [https://github.com/fmoya-laboral/RIU-Frontend-FernandoMoya](https://github.com/fmoya-laboral/RIU-Frontend-FernandoMoya)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+### ⚙️ Comandos Disponibles
+```bash
+# Servidor local
+ng serve
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Build productivo
+ng build --configuration production
+
+# Ejecutar tests unitarios
+ng test --code-coverage
+
+# Ver reporte de coverage
+npx http-server coverage/ -o
+```
+
+---
+
+### 🚧 Docker
+```bash
+# Build del contenedor
+docker build -t riu-frontend .
+
+# Levantar la app en localhost:4200
+docker run -p 4200:80 riu-frontend
+```
+
+O bien con Docker Compose:
+```bash
+docker compose up --build
+```
+
+---
+
+### 🌟 Autor
+**Fernando Moya**
+
+---
+
+### 🔗 Recursos Relevantes
+- [Angular](https://angular.io/)
+- [Angular Material](https://material.angular.io/)
+- [RxJS](https://rxjs.dev/)
+- [Docker](https://docs.docker.com/)
+- [GitHub Actions](https://docs.github.com/en/actions)
+
+---
